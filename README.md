@@ -1,9 +1,9 @@
-### Modified From: Vision Transformers for Dense Prediction https://github.com/isl-org/DPT 
+### Modified From: Vision Transformers for Dense Prediction https://github.com/isl-org/DPT to work on Google Colab notebooks
 
 ### Setup 
 
 
-1) clone the repo to a new CoLab notebook
+1) clone the repo to a new Colab notebook
 
     ```
     !git clone https://github.com/KAsiri/DPT.git
