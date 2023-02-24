@@ -2,7 +2,14 @@
 
 ### Setup 
 
-1) Download the model weights and place them in the `/content/DPT/weights` folder:
+
+1) clone the repo to a new CoLab notebook
+
+    ```
+    !git clone https://github.com/KAsiri/DPT.git
+    ```
+
+2) Download the model weights and place them in the `/content/DPT/weights` folder:
 
 
 Monodepth:
@@ -10,10 +17,10 @@ Monodepth:
 - [dpt_large-midas-2f21e586.pt](https://github.com/intel-isl/DPT/releases/download/1_0/dpt_large-midas-2f21e586.pt), [Mirror](https://drive.google.com/file/d/1vnuhoMc6caF-buQQ4hK0CeiMk9SjwB-G/view?usp=sharing)
 
   
-2) Set up dependencies: 
+3) Set up dependencies: 
 
     ```
-    !pip install -r requirements.txt
+    !pip install -r /content/DPT/requirements.txt
     ```
 
 ### Usage 
