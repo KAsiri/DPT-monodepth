@@ -16,6 +16,8 @@ from dpt.transforms import Resize, NormalizeImage, PrepareForNet
 
 #from util.misc import visualize_attention
 
+# update the path value with the project path (/content/<repo_name>) for colab
+path = "/content/DPT-monodepth/"
 
 def run(input_path, output_path, model_path, model_type="dpt_hybrid", optimize=True):
     """Run MonoDepthNN to compute depth maps.
@@ -180,13 +182,13 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 
     parser.add_argument(
-        "-i", "--input_path", default="/content/DPT/input", help="folder with input images"
+        "-i", "--input_path", default=str(path)+"input", help="folder with input images"
     )
 
     parser.add_argument(
         "-o",
         "--output_path",
-        default="/content/DPT/output_monodepth",
+        default= str(path)+"output_monodepth",
         help="folder for output images",
     )
 
@@ -214,11 +216,11 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     default_models = {
-        "midas_v21": "weights/midas_v21-f6b98070.pt",
-        "dpt_large": "weights/dpt_large-midas-2f21e586.pt",
-        "dpt_hybrid": "/content/DPT/weights/dpt_hybrid-midas-501f0c75.pt",
-        "dpt_hybrid_kitti": "weights/dpt_hybrid_kitti-cb926ef4.pt",
-        "dpt_hybrid_nyu": "weights/dpt_hybrid_nyu-2ce69ec7.pt",
+        "midas_v21": str(path)+"weights/midas_v21-f6b98070.pt",
+        "dpt_large": str(path)+"weights/dpt_large-midas-2f21e586.pt",
+        "dpt_hybrid": str(path)+"weights/dpt_hybrid-midas-501f0c75.pt",
+        "dpt_hybrid_kitti": str(path)+"weights/dpt_hybrid_kitti-cb926ef4.pt",
+        "dpt_hybrid_nyu": str(path)+"weights/dpt_hybrid_nyu-2ce69ec7.pt",
     }
 
     if args.model_weights is None:
