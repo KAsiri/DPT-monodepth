@@ -9,7 +9,7 @@
     !git clone https://github.com/KAsiri/DPT-monodepth.git
     ```
 
-2) Download the model weights and place them in the `/content/DPT/weights` folder:
+2) Download the model weights and place them in the `/content/DPT-monodepth/weights` folder:
 
     ```
     !wget -P /content/DPT-monodepth/weights https://github.com/intel-isl/DPT/releases/download/1_0/dpt_hybrid-midas-501f0c75.pt 
@@ -36,7 +36,7 @@ Monodepth:
 2) Run a monocular depth estimation model:
 
     ```
-    !python /content/DPT/run_monodepth.py
+    !python /content/DPT-monodepth/run_monodepth.py
     ```
     
 3) The results are written to the folder `/content/DPT-monodepth/output_monodepth`.
